@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "../contexts/language-context"
+import ReactPlayer from 'react-player'
 
 export default function HeroSection() {
   const { t } = useLanguage()
@@ -47,10 +48,11 @@ export default function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <video className="w-full h-auto" poster="/placeholder.svg?height=400&width=600" controls>
-              <source src="/demo-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <ReactPlayer 
+              url="/AI Agent Demo.mp4" 
+              className="w-full h-auto" 
+              controls 
+            />
           </motion.div>
         </div>
       </div>
